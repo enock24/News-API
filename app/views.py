@@ -16,11 +16,11 @@ def index():
     return render_template('index.html', title = title)
 
 
-@app.route('/new/<new_id>')
-def movie(new_id):
+@app.route('/news/<news_id>')
+def news(news_id):
 
     '''
-    View new page function that returns the new details page and its data
+    View news page function that returns the news details page and its data
     '''
-    title = f'You are viewing {new_id}'
+    title = f'You are viewing {news_id}'
     return render_template('new.html',title = title)
