@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!-- Styles block -->
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+<div class="container">
+    <!-- <form>
+        <input type="text" name="news_query" placeholder="Search for a News" class="form-control">
+        <input type="submit" value="Submit" class="btn btn-default">
+    </form> -->
+
+</div>
+<div class="row">
+    
+        <!-- Popular News -->
+        <h3> Popular News</h3>
+        <ul>
+            {{ macro.displayNewsList(popularity)}}
+        </ul>
+    
+
+    <!-- Upcoming News  -->
+    <h3> Bit Coin News </h3>
+    <ul>
+        {{ macro.displayNewsList(bitcoin)}}
+    </ul>
+
+
+
+
+    <!-- Now showing News -->
+    <h3>Business News</h3>
+    <ul>
+        {{ macro.displayNewsList(business)}}
+    </ul>
+
+    
+
+    <!-- Now showing News -->
+    <h3>Tech Crunch News</h3>
+    <ul>
+        {{ macro.displayNewsList(techcrunch)}}
+    </ul>
+
+<div class="row">
+    <!-- Now showing News -->
+    <h3>Wall Street News</h3>
+    <ul>
+        {{ macro.displayNewsList(wall_street)}}
+    </ul>
+</div>
+
+
+{% endblock%}
