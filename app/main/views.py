@@ -16,10 +16,10 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    # Getting popular movie
+    # Getting popular news
     popular_news = get_news('popular')
     upcoming_news = get_news('upcoming')
-    now_showing_news= get_news('now_playing')
+    now_showing_news = get_news('now_playing')
 
     title = 'Home - Welcome to The best News Review Website Online'
 
@@ -31,7 +31,7 @@ def index():
         return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, now_showing = now_showing_news )
 
 
-@main.route('/movie/<int:id>')
+@main.route('/news/<int:id>')
 def news(id):
 
     '''
@@ -41,7 +41,7 @@ def news(id):
     title = f'{news.title}'
     reviews = Review.get_reviews(news.id)
 
-    return render_template('news.html',title = title,movie = news,reviews = reviews)
+    return render_template('news.html',title = title,news = news,reviews = reviews)
 
 
 
@@ -54,7 +54,7 @@ def search(news_name):
     news_name_format = "+".join(news_name_list)
     searched_news = search_news(news_name_format)
     title = f'search results for {news_name}'
-    return render_template('search.html',movies = searched_news)
+    return render_template('search.html',news = searched_news)
 
 
 @main.route('/news/review/new/<int:id>', methods = ['GET','POST'])
@@ -74,4 +74,6 @@ def new_review(id):
         return redirect(url_for('.news',id = news.id ))
 
     title = f'{news.title} review'
-    return render_template('new_review.html',title = title, review_form=form, movie=news)
+    return render_template('new_review.html',title = title, review_form=form, news=news)
+
+
