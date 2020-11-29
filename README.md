@@ -18,7 +18,7 @@ Bootstrap
 Javascript
 
 ## Contact Details
-If you have any suggestion or modification that can better this project, feel free to contact me. Here are my details: Langat K Justus Email: Towett Enock K enookimuu@gmail.com
+If you have any suggestion or modification that can better this project, feel free to contact me. Here are my details: Towett Enock K  Email:enookimuu@gmail.com
 ## LICENSE
 The MIT License (MIT)
 Copyright (c) 2015 Chris Kibble
