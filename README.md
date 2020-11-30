@@ -17,6 +17,10 @@ Html5
 Bootstrap
 Javascript
 
+## Codebeat
+[![codebeat badge](https://codebeat.co/badges/68954112-ce05-423b-bb20-8327e4794dec)](https://snipper2.herokuapp.com/)
+
+
 ## Contact Details
 If you have any suggestion or modification that can better this project, feel free to contact me. Here are my details: Towett Enock K  Email:enookimuu@gmail.com
 ## LICENSE
